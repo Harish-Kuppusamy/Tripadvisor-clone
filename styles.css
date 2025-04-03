@@ -16,14 +16,15 @@ body{
 .navbar{
 background-color: white;
 height: fit-content;
-width: 70%;
+width: 100%;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
 margin: 15px auto;
 position: sticky;
 top: 0;
 z-index: 1;
+padding: 20px;
 }
 
 .navbar__s1 img{
@@ -67,7 +68,8 @@ cursor: pointer;
 }
 
 .hero{
-  width: 70%;
+  width: 90%;
+  max-width: 1200px;
   height: fit-content;
   background-color: white;
   text-align: center;
@@ -104,7 +106,8 @@ font-weight: 1000;
   background-color: white;
   color: black;
   height: fit-content;
-  width: 70%;
+  width: 90%;
+  max-width: 1200px;
   display: flex;
 
   align-items: center;
@@ -139,7 +142,8 @@ font-weight: 1000;
 
 /*explore*/
 .explore{
-  width: 70%;
+  width: 90%;
+  max-width: 1200px;
   height: fit-content;
   background-color: white;
   padding: 15px;
@@ -197,7 +201,8 @@ width: 250px;
 }
 
 .experience{
-  width: 70%;
+  width: 90%;
+  max-width: 1200px;
   height: fit-content;
   background-color: white;
   padding: 15px;
@@ -230,7 +235,7 @@ white-space: nowrap;
 .experience__items{
 text-align: center;
     flex: 0 0 auto;
-  gap: 30px;
+  gap: 10px;
   
    width: 400px;
     cursor: pointer;
@@ -307,6 +312,13 @@ text-align: center;
 
 
 @media screen and (max-width:600px) {
+  .navbar{
+    width: 100%;
+  justify-content: space-between;
+  }
+  body{
+    font-size: 10px;
+  }
   .navbar__s2{
     display: none;
   }
@@ -317,31 +329,55 @@ text-align: center;
     display: block;
   }
   .hero__container{
-    
-    overflow-x: scroll;
-    width: 350px;
-    margin-right: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding: 20px;
     
   }
   .explore__container{
-    flex-wrap: wrap;
-   
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
   }
 
   .experience__container{
-    flex-wrap: nowrap;
-    overflow: hidden;
-    display: block;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  margin: 0px;
   }
 
   .experience__items{
-    width: 70%;
+    width: 80%;
     text-align: center;
+    gap: 5px;
 
    
   }
-.image{
-  min-width: 70%;
+  .experience__items img{
+    width: 85%;
+  }
+  .image{
+   width: fit-content;
+   height: fit-content;
+  }
+.image img{
+ width: 100%;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: center;
+  height: fit-content;
+}
+.copy{
+  text-align: center;
+  width: 100%;
+  position: relative;
 }
  
   
