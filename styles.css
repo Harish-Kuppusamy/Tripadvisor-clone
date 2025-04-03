@@ -14,8 +14,8 @@ body{
   
 }
 .navbar{
-background-color: white;
-height: fit-content;
+background-color:white;
+height: 50px;
 width: 100%;
 display: flex;
 justify-content: space-around;
@@ -106,10 +106,12 @@ font-weight: 1000;
   background-color: white;
   color: black;
   height: fit-content;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
-
+position: sticky;
+top: 90px;
+z-index: 1;
   align-items: center;
   margin: 15px auto;
   padding: 10px;
@@ -142,7 +144,7 @@ font-weight: 1000;
 
 /*explore*/
 .explore{
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   height: fit-content;
   background-color: white;
@@ -170,8 +172,9 @@ flex:0 0 auto;
 
  
 
-width: 250px;
+width: 300px;
   cursor: pointer;
+  padding: 15px;
 
  
 }
@@ -201,8 +204,8 @@ width: 250px;
 }
 
 .experience{
-  width: 90%;
-  max-width: 1200px;
+ max-width: 1200px;
+  
   height: fit-content;
   background-color: white;
   padding: 15px;
@@ -216,18 +219,18 @@ width: 250px;
   display: flex;
   align-items: center;
  
-  gap: 30px;
+
 white-space: nowrap;
   overflow-x: auto;
   scroll-behavior: smooth;
-  margin-top: 15px;
+ 
 }
 .experience__items img{
-  width: 110%;
-  height: auto;
+  width: 100%;
+  height: fit-content;
 
    border-radius: 5px;
-   transition: transform 0.3s ease-in-out;
+   transition: transform 0.2s ease-in-out;
 }
 .experience__items img:hover{
   transform: scale(1.1);
@@ -235,11 +238,11 @@ white-space: nowrap;
 .experience__items{
 text-align: center;
     flex: 0 0 auto;
-  gap: 10px;
+ 
   
-   width: 400px;
+   max-width: 400px;
     cursor: pointer;
-    padding: 55px;
+    padding: 20px;
   
    
   }
@@ -314,10 +317,17 @@ text-align: center;
 @media screen and (max-width:600px) {
   .navbar{
     width: 100%;
-  justify-content: space-between;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+  background-color: white;
+  margin-top: 2px;
+  height: fit-content;
   }
   body{
-    font-size: 10px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
   }
   .navbar__s2{
     display: none;
@@ -327,14 +337,26 @@ text-align: center;
   }
   .navbar__s4{
     display: block;
+    margin-right: 50px;
+  }
+  .hero{
+    width: 100%;
+   margin: 1px auto;
   }
   .hero__container{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
     width: 100%;
-    padding: 20px;
+    margin: 5px 2px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  
     
+  }
+  .hero__container p{
+    cursor: pointer;
+  }
+  .searchbox{
+    width: 90%;
   }
   .explore__container{
     overflow-x: auto;
@@ -360,36 +382,35 @@ text-align: center;
   .experience__items img{
     width: 85%;
   }
-  .image{
+  /* .image{
    width: fit-content;
    height: fit-content;
   }
 .image img{
- width: 100%;
-}
+max-width: 550px;
+height: fit-content;
+} */
+ .image{
+  display: none;
+ }
 .footer{
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: fit-content;
+  margin-bottom: 10px;
+}
+.footer__s4{
+ left: 5px;
+}
+.footer p{
+  padding: 7px;
 }
 .copy{
-  text-align: center;
-  width: 100%;
-  position: relative;
+  display: none;
 }
  
   
 }
 
-@media screen and (max-width:800px) {
-  .navbar{
-    gap: 30px;
-   justify-content: space-around;
-   max-width: 70%;
-   margin: 10px auto;
-
-  }
-  
-}
